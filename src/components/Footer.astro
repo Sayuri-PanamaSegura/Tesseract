@@ -1,0 +1,56 @@
+---
+
+
+const year = new Date().getFullYear();
+---
+
+<footer class="bg-black text-white py-10 px-6">
+  <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+    
+    <!-- Logo + descripción -->
+    <div>
+      <img src="/logo.png" alt="Logo Conecta" class="h-10 mb-4" />
+      <p class="text-gray-400 text-sm">
+      Soluciones de ciberseguridad diseñadas para proteger lo esencial: tus datos, tus accesos y la confianza de tus clientes.</p>
+    </div>
+
+<!-- Enlaces útiles -->
+<div class="md:flex md:justify-center">
+  <div>
+    <h3 class="text-white font-semibold mb-3">Enlaces</h3>
+    <ul class="space-y-2 text-sm text-gray-400">
+      <li><a href="/" class="hover:text-white">Inicio</a></li>
+     
+      <li><a href="/#soluciones" class="hover:text-white">Soluciones</a></li>
+      <li><a href="/#industrias" class="hover:text-white">Industrias</a></li>
+      <li><a href="/contacto" class="hover:text-white">Contacto</a></li>
+    </ul>
+  </div>
+</div>
+
+
+    <!-- Contacto + redes -->
+    <div>
+      <h3 class="text-white font-semibold mb-3">Contacto</h3>
+      <ul class="text-sm text-gray-400 space-y-2 mb-4">
+        <li>Email: <a href="mailto:contacto@tesseract.mx" class="hover:text-white">contacto@tesseract.mx</a></li>
+        <li>Tel: <a href="tel:55 8311 6189" class="hover:text-white">55 8311 6189 ext 433 6189</a></li>
+        <li>Av. Ejército Nacional Mexicano 453, Chapultepec Morales, Polanco IV Secc
+Miguel Hidalgo, 11520 Ciudad de México, CDMX</li>
+      </ul>
+
+      <!-- Redes sociales (React icons renderizados como componentes) -->
+   <div class="flex space-x-4 mt-2">
+  <a href="https://www.linkedin.com/company/tesseractmx/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+    <img src="/LinkedIn.png" alt="LinkedIn" class="w-5 h-5 hover:opacity-80 transition" />
+  </a>
+</div>
+
+    </div>
+  </div>
+
+  <div class="border-t border-gray-700 mt-10 pt-6 text-center text-sm text-gray-500">
+    <p class="mb-2">© {year} Tesseract. Todos los derechos reservados.</p>
+
+  </div>
+</footer>

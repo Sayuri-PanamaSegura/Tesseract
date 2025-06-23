@@ -1,0 +1,117 @@
+<!-- Navbar -->
+<nav
+  id="navbar"
+  class="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-6xl bg-[#242636]/90 backdrop-blur-md border border-white/20 rounded-xl shadow-lg px-6 py-4 flex items-center gap-x-4 md:justify-between justify-start transition-all duration-300"
+>
+
+  <!-- Logo + Links -->
+  <div class="flex items-center space-x-4 md:space-x-10">
+<!-- Logo -->
+<a href="/" class="flex items-center mt-[2px]">
+  <img
+    src="/logo.png"
+    alt="Logo"
+    class="h-6 sm:h-8 md:h-10 w-auto transition-all duration-300"
+  />
+</a>
+
+    </a>
+
+    <!-- Links solo en desktop -->
+    <div class="hidden md:flex items-center space-x-12 text-sm font-medium">
+      <a href="/#soluciones" class="nav-link" data-target="soluciones">SOLUCIONES</a>
+      <a href="/#industrias" class="nav-link" data-target="industrias">INDUSTRIAS</a>
+    </div>
+  </div>
+
+  <!-- Botón CONTACTO + Flechita para móvil -->
+  <div class="flex items-center ml-auto md:ml-0 space-x-5">
+    <a href="/contacto" class="btn-neon text-sm">
+      CONTACTO
+    </a>
+    <!-- Flechita centrada verticalmente -->
+    <button
+      id="mobile-toggle"
+      class="text-[#CEFF1C] text-[32px] md:hidden flex items-center justify-center -mt-[16px]"
+    >
+      ⌄
+    </button>
+  </div>
+</nav>
+
+
+<!-- Menú móvil desplegable -->
+<div
+  id="mobile-menu"
+  class="fixed top-[76px] left-1/2 -translate-x-1/2 w-[95%] max-w-6xl bg-[#242636] rounded-xl shadow-md border border-white/20 backdrop-blur-lg px-6 py-4 space-y-4 text-white text-center text-sm opacity-0 pointer-events-none transition-all duration-300 z-40"
+>
+  <a href="#soluciones" class="block nav-link" data-target="soluciones">SOLUCIONES</a>
+  <a href="#industrias" class="block nav-link" data-target="industrias">INDUSTRIAS</a>
+</div>
+
+<!-- Script -->
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const links = document.querySelectorAll(".nav-link");
+    const mobileToggle = document.getElementById("mobile-toggle");
+    const mobileMenu = document.getElementById("mobile-menu");
+
+    links.forEach(link => {
+      link.addEventListener("click", (e) => {
+        e.preventDefault();
+        const targetId = link.getAttribute("data-target");
+        const targetEl = document.getElementById(targetId);
+        if (targetEl) {
+          const offset = 80;
+          const top = targetEl.getBoundingClientRect().top + window.pageYOffset - offset;
+          window.scrollTo({ top, behavior: "smooth" });
+        }
+
+        links.forEach(l => l.classList.remove("active"));
+        link.classList.add("active");
+
+        // Cierra menú móvil
+        mobileMenu.classList.remove("opacity-100", "pointer-events-auto");
+        mobileMenu.classList.add("opacity-0", "pointer-events-none");
+        mobileToggle.innerText = "⌄";
+      });
+    });
+
+    // Mostrar / ocultar menú al dar click en la flechita
+    mobileToggle?.addEventListener("click", () => {
+      const isOpen = mobileMenu.classList.contains("opacity-100");
+      if (isOpen) {
+        mobileMenu.classList.remove("opacity-100", "pointer-events-auto");
+        mobileMenu.classList.add("opacity-0", "pointer-events-none");
+        mobileToggle.innerText = "⌄";
+      } else {
+        mobileMenu.classList.remove("opacity-0", "pointer-events-none");
+        mobileMenu.classList.add("opacity-100", "pointer-events-auto");
+        mobileToggle.innerText = "✕";
+      }
+    });
+  });
+</script>
+
+<!-- Estilos -->
+<style>
+  .nav-link {
+    color: white;
+    font-family: var(--fuente-normal);
+    border-bottom: 2px solid transparent;
+    padding-bottom: 2px;
+    transition: all 0.3s ease;
+  }
+
+  .nav-link:hover {
+    color: #CEFF1C;
+  }
+
+  .nav-link.active {
+    color: #CEFF1C;
+    font-weight: bold;
+    border-bottom: 2px solid #CEFF1C;
+  }
+
+  
+</style>

@@ -1,0 +1,193 @@
+---
+import SolucionesCarousel from "./movimiento/SolucionesCarousel"
+import SeccionConEfecto from "./movimiento/SeccionConEfecto"
+import SeccionConImagenLateral from "./movimiento/SeccionConImagenLateral"
+import GrowCircle from "./movimiento/GrowCircle"
+import MotionFadeIn from "./movimiento/MotionFadeIn"
+---
+
+<section id="soluciones" class="w-full px-6 pt-16 pb-0 text-white"> <!-- 👈 reduce pb -->
+<SeccionConEfecto
+  client:visible
+  titulo="Soluciones"
+  texto='Nuestras soluciones están diseñadas como un ecosistema criptográfico modular, que permite a tu organización operar de forma <span class="font-semibold">segura</span>, <span class="font-semibold">cumplir con regulaciones</span> y mantener el <span class="font-semibold">control total</span> sobre identidades, accesos y datos sensibles.'
+/>
+
+<div class="max-w-5xl mx-auto text-center mb-16">
+ <div class="grid grid-cols-1 md:grid-cols-2 gap-8 place-items-center">  
+    <!-- Tarjeta 1 -->
+    <MotionFadeIn client:visible direction="up" delay={0.1}>
+  <div class="flex items-start p-6 rounded-tr-2xl rounded-bl-2xl w-full max-w-md border border-white shadow-sm min-h-[200px]">
+    <GrowCircle client:visible>
+      <div class="min-w-[60px] min-h-[60px] rounded-full bg-[#C5FD83] flex items-center justify-center mr-4">
+        <img src="/sitio/2fa.png" alt="2FA" class="h-10 w-10" />
+      </div>
+    </GrowCircle>
+    <div>
+      <p class="text-xl font-semibold mb-2 text-white text-left">Autenticación 2FA</p>
+      <p class="text-sm leading-relaxed font-poppins text-white text-left">
+  Autenticación robusta mediante tokens dinámicos firmados con HSM, diseñados para <strong>cumplir regulaciones</strong> estrictas y <strong>prevenir accesos no autorizados</strong>.
+</p>
+    </div>
+  </div>
+</MotionFadeIn>
+
+
+    <!-- Tarjeta 2 -->
+    <MotionFadeIn client:visible direction="down" delay={0.1}>
+      <div class="flex items-start p-6 rounded-tr-2xl rounded-bl-2xl w-full max-w-md border border-white shadow-sm min-h-[200px]">
+        <GrowCircle client:visible>
+          <div class="min-w-[60px] min-h-[60px] rounded-full bg-[#C5FD83] flex items-center justify-center mr-4">
+            <img src="/sitio/database.png" alt="HSM" class="h-10 w-10" />
+          </div>
+        </GrowCircle>
+        <div>
+          <p class="text-xl font-semibold mb-2 text-white text-left">HSM as a Service</p>
+        <p class="text-sm leading-relaxed font-poppins text-white text-left">
+  <strong>Resguardo seguro</strong> de llaves criptográficas en bóvedas HSM dedicadas, con <strong>alta disponibilidad</strong> y operación desde <strong>México</strong>.
+</p>
+        </div>
+      </div>
+    </MotionFadeIn>
+
+    <!-- Tarjeta 3 -->
+    <MotionFadeIn client:visible direction="up" delay={0.1}>
+      <div class="flex items-start p-6 rounded-tr-2xl rounded-bl-2xl w-full max-w-md border border-white shadow-sm min-h-[200px]">
+        <GrowCircle client:visible>
+          <div class="min-w-[60px] min-h-[60px] rounded-full bg-[#C5FD83] flex items-center justify-center mr-4">
+            <img src="/sitio/api.png" alt="APIs" class="h-10 w-10" />
+          </div>
+        </GrowCircle>
+        <div>
+          <p class="text-xl font-semibold mb-2 text-white text-left">APIs de Cifrado</p>
+           <p class="text-sm leading-relaxed font-poppins text-white text-left">
+  APIs RESTful para cifrado, firma y validación de integridad que se <strong>integran fácilmente</strong> en plataformas backend o pipelines DevOps.
+</p>
+        </div>
+      </div>
+    </MotionFadeIn>
+
+    <!-- Tarjeta 4 -->
+    <MotionFadeIn client:visible direction="down" delay={0.1}>
+      <div class="flex items-start p-6 rounded-tr-2xl rounded-bl-2xl w-full max-w-md border border-white shadow-sm min-h-[200px]">
+        <GrowCircle client:visible>
+          <div class="min-w-[60px] min-h-[60px] rounded-full bg-[#C5FD83] flex items-center justify-center mr-4">
+            <img src="/sitio/BUS.png" alt="Bus Criptográfico" class="h-10 w-10" />
+          </div>
+        </GrowCircle>
+        <div>
+          <p class="text-xl font-semibold mb-2 text-white text-left">Bus Criptográfico On-Prem</p>
+         <p class="text-sm leading-relaxed font-poppins text-white text-left">
+  <strong>Middleware seguro</strong> que permite a instituciones con HSM propio exponer servicios criptográficos vía APIs y controlar su infraestructura.
+</p>
+        </div>
+      </div>
+    </MotionFadeIn>
+
+    <!-- Tarjeta 5 -->
+    <MotionFadeIn client:visible direction="up" delay={0.1}>
+      <div class="flex items-start p-6 rounded-tr-2xl rounded-bl-2xl w-full max-w-md border border-white shadow-sm min-h-[200px]">
+        <GrowCircle client:visible>
+          <div class="min-w-[60px] min-h-[60px] rounded-full bg-[#C5FD83] flex items-center justify-center mr-4">
+            <img src="/sitio/api.png" alt="Keyphos" class="h-10 w-10" />
+          </div>
+        </GrowCircle>
+        <div>
+          <p class="text-xl font-semibold mb-2 text-white text-left">Keyphos – KMS Multicloud</p>
+        <!-- Tarjeta 5 -->
+<p class="text-sm leading-relaxed font-poppins text-white text-left">
+  Plataforma de <strong>gestión de llaves criptográficas</strong> para entornos multinube, híbridos y on-premise, con cumplimiento normativo y control total.
+</p>
+
+        </div>
+      </div>
+    </MotionFadeIn>
+
+    <!-- Tarjeta 6 -->
+    <MotionFadeIn client:visible direction="down" delay={0.1}>
+      <div class="flex items-start p-6 rounded-tr-2xl rounded-bl-2xl w-full max-w-md border border-white shadow-sm min-h-[200px]">
+        <GrowCircle client:visible>
+          <div class="min-w-[60px] min-h-[60px] rounded-full bg-[#C5FD83] flex items-center justify-center mr-4">
+            <img src="/sitio/HSM.png" alt="Monitor HSM" class="h-10 w-10" />
+          </div>
+        </GrowCircle>
+        <div>
+          <p class="text-xl font-semibold mb-2 text-white text-left">Monitor HSM</p>
+           <!-- Tarjeta 6 -->
+<p class="text-sm leading-relaxed font-poppins text-white text-left">
+  Plataforma de <strong>observabilidad y monitoreo en tiempo real</strong> de la infraestructura HSM y operaciones criptográficas. Detecta caídas, anomalías, saturación o uso irregular de los recursos.
+</p>
+        </div>
+      </div>
+    </MotionFadeIn>
+<!-- Tarjeta 7 (centrada) -->
+<div class="md:col-span-2 flex justify-center">
+  <MotionFadeIn client:visible direction="up" delay={0.1}>
+    <div class="flex items-start p-6 rounded-tr-2xl rounded-bl-2xl w-full max-w-md border border-white shadow-sm min-h-[200px]">
+      <GrowCircle client:visible>
+        <div class="min-w-[60px] min-h-[60px] rounded-full bg-[#C5FD83] flex items-center justify-center mr-4">
+          <img src="/sitio/key.png" alt="Key Manager" class="h-10 w-10" />
+        </div>
+      </GrowCircle>
+      <div>
+        <p class="text-xl font-semibold mb-2 text-white text-left">Key Manager</p>
+      
+<!-- Tarjeta 7 -->
+<p class="text-sm leading-relaxed font-poppins text-white text-left">
+  Gestor integral del ciclo de vida de llaves criptográficas: <strong>Generación, activación, rotación, expiración y revocación</strong>.
+</p>
+      </div>
+    </div>
+  </MotionFadeIn>
+</div>
+
+</div>
+</section>
+
+<section class="w-full px-6 pt-16 pb-20 text-white">
+  <div class="max-w-4xl mx-auto">
+    
+    <!-- Título decorado -->
+    <SeccionConImagenLateral
+      client:visible
+      id="autenticacion"
+      titulo="Autenticación robusta para un acceso seguro"
+      texto='Protege identidades, accesos y operaciones con <span class="font-semibold">autenticación de doble factor (2FA)</span> respaldada por criptografía física.'
+      iconoDefault="/sector/off.png"
+      iconoActivo="/sector/on.png"
+    />
+
+    <!-- Contenedor rectangular -->
+    <div class="rounded-2xl overflow-hidden">
+
+      <!-- Parte superior: 3 tarjetas -->
+      <div class="grid grid-cols-1 md:grid-cols-3 divide-y divide-[#C5FD83] md:divide-y-0 md:[&>*:not(:first-child)]:border-l md:[&>*:not(:first-child)]:border-l-[1px] md:[&>*:not(:first-child)]:border-l-[#C5FD83]">
+        <div class="p-6 text-sm font-poppins text-center">
+          Tokens dinámicos generados y validados por HSM, <strong>imposibles de replicar</strong>
+        </div>
+        <div class="p-6 text-sm font-poppins text-center">
+          <strong>Compatible</strong> con entornos móviles, web, escritorio y legacy
+        </div>
+        <div class="p-6 text-sm font-poppins text-center">
+          <strong>Cumplimiento</strong> automático con CNBV (Categoría 3), Banxico y PCI DSS
+        </div>
+      </div>
+
+      <!-- Línea horizontal divisoria sólida -->
+      <div class="w-full h-[1px] bg-[#C5FD83]"></div>
+
+      <!-- Parte inferior: 2 tarjetas centradas -->
+      <div class="grid grid-cols-1 md:grid-cols-2 divide-y divide-[#C5FD83] md:divide-y-0 md:divide-x md:divide-[#C5FD83]">
+        <div class="p-6 text-sm font-poppins text-center">
+          <strong>Prevención efectiva</strong> de accesos no autorizados y fraudes por robo de credenciales
+        </div>
+        <div class="p-6 text-sm font-poppins text-center">
+          SDKs para <strong>integración rápida</strong> con tus plataformas existentes
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+  <SolucionesCarousel  client:load />
