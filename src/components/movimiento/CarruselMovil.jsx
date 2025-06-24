@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Mousewheel } from "swiper/modules";
 import "swiper/css";
@@ -51,8 +52,10 @@ const tarjetas = [
 ];
 
 export default function CarruselMovil() {
+  const [swiperInstance, setSwiperInstance] = useState(null);
+
   return (
-    <div className="h-[38vh] w-full md:hidden mt-4">
+    <div className="relative h-[38vh] w-full md:hidden mt-4 flex flex-col items-center">
       <Swiper
         direction="vertical"
         slidesPerView={2.3}
@@ -60,7 +63,8 @@ export default function CarruselMovil() {
         pagination={{ clickable: true }}
         mousewheel={true}
         modules={[Pagination, Mousewheel]}
-        className="h-full"
+        className="h-full w-full"
+        onSwiper={setSwiperInstance}
       >
         {tarjetas.map((t, i) => (
           <SwiperSlide key={i}>
@@ -82,6 +86,23 @@ export default function CarruselMovil() {
           </SwiperSlide>
         ))}
       </Swiper>
+
+      {/* Flecha abajo */}
+      <button
+  onClick={() => swiperInstance?.slideNext()}
+  className="absolute -bottom-2 z-10 bg-transparent animate-bounce"
+  aria-label="Siguiente"
+>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    className="h-9 w-9 text-[#CEFF1C]"
+    fill="currentColor"
+    viewBox="0 0 24 24"
+  >
+    <path d="M12 21c-.3 0-.6-.1-.8-.4l-7-9c-.3-.4-.3-1 0-1.4s1-.4 1.4 0L12 18.2l6.4-8c.3-.4 1-.4 1.4 0s.4 1 0 1.4l-7 9c-.2.3-.5.4-.8.4z"/>
+  </svg>
+</button>
+
     </div>
   );
 }

@@ -104,18 +104,23 @@ a:hover {
   border-radius: 1.5rem;
   box-shadow: 0 0 5px rgba(206, 255, 28, 0.5), 0 0 8px rgba(206, 255, 28, 0.4);
   overflow: hidden;
+ 
 
 }
+
+
+
+
 .btn-neon {
   display: inline-block;
   padding: 0.75rem 2rem;
   border: 2px solid #CEFF1C;
   border-radius: 9px;
-  font-weight: 600;
+  font-weight: 200;
   color: #CEFF1C;
   background-color: transparent;
   text-shadow: 0 0 2px #CEFF1C;
-  box-shadow: 0 0 5px #CEFF1C, 0 0 10px #CEFF1C inset;
+  box-shadow: 0 0 2px #CEFF1C, 0 0 5px #CEFF1C inset;
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
@@ -129,20 +134,24 @@ a:hover {
   background-color: #CEFF1C;
   color: #000;
   box-shadow:
-    0 0 10px #CEFF1C,
-    0 0 15px #CEFF1C,
-    0 0 20px #CEFF1C;
+    0 0 3px #CEFF1C,
+    0 0 4px #CEFF1C,
+    0 0 6px #CEFF1C;
   text-shadow: none;
   outline: none;
+   font-weight: 600;
+   
+  font-size: 1rem; /* ligero aumento */
   text-decoration: none;
 }
 
 .btn-neon:active {
   box-shadow:
-    0 0 10px #CEFF1C,
-    0 0 20px #CEFF1C,
-    0 0 30px #CEFF1C;
+    0 0 3px #CEFF1C,
+    0 0 4px #CEFF1C,
+    0 0 6px #CEFF1C;
   outline: none;
+   font-weight: 600;
   text-decoration: none;
 }
 

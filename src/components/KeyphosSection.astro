@@ -63,8 +63,8 @@ const tarjetas = [
     <!-- Desktop grid -->
     <div class="hidden md:grid grid-cols-3 gap-6">
       {tarjetas.map((t, i) => (
-        <div key={i} class={`text-white p-6 border border-white ${t.clase}`}>
-          <p class="font-poppins text-sm leading-relaxed">
+        <div key={i} class={`text-white text-center p-6 border border-white ${t.clase}`}>
+          <p class="font-poppins text-sm leading-relaxed ">
             {t.texto.map((fragmento, j) =>
               fragmento.bold ? (
                 <strong key={j} class="font-semibold">{fragmento.content}</strong>
@@ -156,7 +156,7 @@ const tarjetas = [
   <form
     action="https://formsubmit.co/tu-correo@ejemplo.com"
     method="POST"
-    class="max-w-2xl mx-auto  backdrop-blur-lg p-10 rounded-3xl border-2 border-[#CEFF1C] shadow-xl grid gap-6"
+    class="max-w-2xl mx-auto  backdrop-blur-lg p-10 rounded-3xl border-2 border-white shadow-xl grid gap-6"
   >
     <input type="hidden" name="_captcha" value="false" />
     <input type="hidden" name="_next" value="/gracias" />
@@ -247,7 +247,7 @@ const tarjetas = [
     <div class="text-center mt-6">
       <button
         type="submit"
-        class="btn-neon px-8 py-3  font-bold rounded-xl "
+        class="btn-neon px-8 py-3  font-medium rounded-xl "
       >
       
        ENVIAR MENSAJE 
