@@ -3,18 +3,15 @@
   id="navbar"
   class="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-6xl bg-[#242636]/90 backdrop-blur-md border border-white/20 rounded-xl shadow-lg px-6 py-4 flex items-center gap-x-4 md:justify-between justify-start transition-all duration-300"
 >
-
- <!-- Logo + Links -->
-<div class="flex items-center space-x-4 md:space-x-10">
-  <!-- Logo -->
-  <a href="/" class="flex items-center h-10">
-    <img
-      src="/logo.png"
-      alt="Logo"
-      class="h-full max-h-10 w-auto object-contain transition-all duration-300"
-    />
-  </a>
-
+  <!-- Logo + Links -->
+  <div class="flex items-center space-x-4 md:space-x-10">
+    <!-- Logo -->
+    <a href="/" class="flex items-center h-10">
+      <img
+        src="/logo.png"
+        alt="Logo"
+        class="h-full max-h-10 w-auto object-contain transition-all duration-300"
+      />
     </a>
 
     <!-- Links solo en desktop -->
@@ -26,12 +23,12 @@
 
   <!-- Botón CONTACTO + Flechita para móvil -->
   <div class="flex items-center ml-auto md:ml-0 space-x-5">
-   <a
-  href="/contacto"
-  class="btn-neon text-xs sm:text-sm px-3 sm:px-4 py-[6px] sm:py-[8px]"
->
-  CONTACTO
-</a>
+    <a
+      href="/contacto"
+      class="btn-neon text-xs sm:text-sm px-3 sm:px-4 py-[6px] sm:py-[8px]"
+    >
+      CONTACTO
+    </a>
 
     <!-- Flechita centrada verticalmente -->
     <button
@@ -43,14 +40,13 @@
   </div>
 </nav>
 
-
 <!-- Menú móvil desplegable -->
 <div
   id="mobile-menu"
   class="fixed top-[100px] left-1/2 -translate-x-1/2 w-[95%] max-w-6xl bg-[#242636] rounded-xl shadow-md border border-white/20 backdrop-blur-lg px-6 py-4 space-y-4 text-white text-center text-sm opacity-0 pointer-events-none transition-all duration-300 z-40"
 >
-  <a href="#soluciones" class="block nav-link" data-target="soluciones">SOLUCIONES</a>
-  <a href="#industrias" class="block nav-link" data-target="industrias">INDUSTRIAS</a>
+  <a href="/#soluciones" class="block nav-link" data-target="soluciones">SOLUCIONES</a>
+  <a href="/#industrias" class="block nav-link" data-target="industrias">INDUSTRIAS</a>
 </div>
 
 <!-- Script -->
@@ -64,6 +60,14 @@
       link.addEventListener("click", (e) => {
         e.preventDefault();
         const targetId = link.getAttribute("data-target");
+
+        // Si no estamos en la home, redireccionamos
+        if (window.location.pathname !== "/") {
+          window.location.href = `/#${targetId}`;
+          return;
+        }
+
+        // Si estamos en home, hacemos scroll suave
         const targetEl = document.getElementById(targetId);
         if (targetEl) {
           const offset = 80;
@@ -94,6 +98,19 @@
         mobileToggle.innerText = "✕";
       }
     });
+
+    // Al cargar la home con hash, hacer scroll automático
+    const hash = window.location.hash;
+    if (window.location.pathname === "/" && hash) {
+      const targetEl = document.querySelector(hash);
+      if (targetEl) {
+        setTimeout(() => {
+          const offset = 80;
+          const top = targetEl.getBoundingClientRect().top + window.pageYOffset - offset;
+          window.scrollTo({ top, behavior: "smooth" });
+        }, 100);
+      }
+    }
   });
 </script>
 
@@ -116,6 +133,4 @@
     font-weight: bold;
     border-bottom: 2px solid #CEFF1C;
   }
-
-  
 </style>
