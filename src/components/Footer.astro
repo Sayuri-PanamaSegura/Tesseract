@@ -1,5 +1,5 @@
 ---
-
+import AvisoModal from "./movimiento/AvisoModal";
 
 const year = new Date().getFullYear();
 ---
@@ -51,6 +51,6 @@ Miguel Hidalgo, 11520 Ciudad de México, CDMX</li>
 
   <div class="border-t border-gray-700 mt-10 pt-6 text-center text-sm text-gray-500">
     <p class="mb-2">© {year} Tesseract. Todos los derechos reservados.</p>
-
+  <AvisoModal client:only="react" />
   </div>
 </footer>

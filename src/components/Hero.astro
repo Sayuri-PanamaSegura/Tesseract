@@ -10,34 +10,38 @@ import HeroTypewriter from "./movimiento/HeroTypewriter";
   <div class="w-full max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-[1.5fr_1fr] items-center gap-12">
     
     <!-- Izquierda -->
-    <div class="flex flex-col justify-center gap-6">
+<div class="flex flex-col justify-center gap-6 w-full">
 
-      <!-- Cajita para el título tipo máquina de escribir -->
-      <div class="w-full md:max-w-[90%] lg:max-w-[600px] text-left leading-tight md:leading-[1.2]">
-        <HeroTypewriter client:visible />
-      </div>
+  <!-- Cajita del contenido izquierdo -->
+  <div class="w-full max-w-[95%] sm:max-w-[90%] md:max-w-[600px] mx-auto text-left">
 
-      <!-- Párrafo debajo -->
-      <p
-        class="text-base md:text-lg font-normal text-white font-poppins leading-relaxed fade-in-up"
-        style="animation-delay: 2s"
+    <!-- Título -->
+ <div class="leading-snug sm:leading-tight md:leading-[1.2]">
+<HeroTypewriter client:visible />
+</div>
+
+    <!-- Párrafo debajo -->
+    <p
+      class="text-base md:text-lg font-normal text-white font-poppins leading-relaxed fade-in-up mt-4 break-words"
+      style="animation-delay: 2s"
+    >
+      Autenticación 2FA, bóvedas criptográficas (HSM),
+      gestión de identidad y analítica de riesgo basada en IA.
+    </p>
+
+    <!-- Botón -->
+    <div class="w-full flex justify-center mt-4">
+      <a
+        href="/contacto"
+        class="btn-neon fade-in-up"
+        style="animation-delay: 2.5s; opacity: 0; transform: translateY(20px);"
       >
-        Autenticación 2FA, bóvedas criptográficas (HSM),
-        gestión de identidad y analítica de riesgo basada en IA.
-      </p>
-
-      <!-- Botón con animación -->
-      <div class="w-full flex justify-center">
-        <a
-          href="/contacto"
-          class="btn-neon fade-in-up"
-          style="animation-delay: 2.5s; opacity: 0; transform: translateY(20px);"
-        >
-          AGENDA DEMO
-        </a>
-      </div>
-
+        AGENDA DEMO
+      </a>
     </div>
+
+  </div>
+</div>
 
     <!-- Imagen derecha -->
     <div

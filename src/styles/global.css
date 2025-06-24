@@ -190,3 +190,8 @@ a:hover {
     border-color: #CEFF1C;
   }
 }
+.typewriter-line {
+  white-space: normal !important; /* evita que fuerce línea única */
+  word-break: break-word;         /* permite romper si es necesario */
+  line-height: 1.3;               /* más compacto para móvil */
+}

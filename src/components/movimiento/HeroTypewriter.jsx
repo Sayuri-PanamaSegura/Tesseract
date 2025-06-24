@@ -36,7 +36,7 @@ export default function HeroTypewriterSecuencial() {
             setEscrituraTerminada(true);
           }
         }
-      }, 25); // velocidad de escritura
+      }, 25);
     };
 
     escribir();
@@ -50,18 +50,14 @@ export default function HeroTypewriterSecuencial() {
   }, []);
 
   return (
-    <div className="text-3xl md:text-5xl font-light text-[#CEFF1C] font-mono leading-[1.08] space-y-3">
+    <div className="text-3xl md:text-5xl font-light text-[#CEFF1C] font-mono leading-tight md:leading-[1.1] space-y-2">
       {frases.map((frase, i) => {
         const textoVisible = textoMostrado[i];
         const estaEscribiendo = textoVisible.length < frase.length;
 
         return (
-          <div key={i} className="relative">
-            {/* espacio reservado invisible */}
-            <span className="invisible">{frase}</span>
-
-            {/* texto visible animado encima */}
-            <span className="absolute top-0 left-0 whitespace-pre">
+          <p key={i} className="relative m-0 p-0">
+            <span className="whitespace-pre-line break-words">
               {textoVisible}
               {i === frases.length - 1 &&
                 !estaEscribiendo &&
@@ -70,7 +66,7 @@ export default function HeroTypewriterSecuencial() {
                   <span className="inline-block w-[1ch] animate-pulse">|</span>
                 )}
             </span>
-          </div>
+          </p>
         );
       })}
     </div>
